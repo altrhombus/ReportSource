@@ -1,6 +1,6 @@
 $msdata = @("https://learn.microsoft.com/en-us/windows/release-health/release-information",
             "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information")
-$d4nData = Invoke-WebRequest "https://raw.datafornerds.io/ms/mswin/releases.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
+$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/mswin/releases.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $releaseList = New-Object System.Collections.ArrayList
 

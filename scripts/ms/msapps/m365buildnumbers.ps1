@@ -1,5 +1,5 @@
 ﻿$rootPage = "https://docs.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
-$d4nData = Invoke-WebRequest "https://raw.datafornerds.io/ms/msapps/buildnumbers.json" | Select -ExpandProperty Content | ConvertFrom-Json
+$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/msapps/buildnumbers.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $pageData = Invoke-WebRequest $rootPage -UseBasicParsing
 

@@ -1,5 +1,5 @@
 ﻿$rootPage = "https://docs.microsoft.com/en-us/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a"
-$d4nData = Invoke-WebRequest "https://raw.datafornerds.io/ms/msother/mslocales.json" | Select -ExpandProperty Content | ConvertFrom-Json
+$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/msother/mslocales.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $pageData = Invoke-WebRequest $rootPage -UseBasicParsing
 
