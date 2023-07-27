@@ -1,11 +1,18 @@
 {
   "DataForNerds": {
-    "LastUpdatedUTC": "2023-07-12T05:01:26.4634218Z",
+    "LastUpdatedUTC": "2023-07-27T13:07:54.4034776Z",
     "SourceList": [
       "https://docs.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
   },
   "Data": [
+    {
+      "ReleaseDate": "2023-07-26",
+      "Channel": "Current",
+      "Build": "16626.20132",
+      "Version": "2307",
+      "FullBuild": "16.0.16626.20132"
+    },
     {
       "ReleaseDate": "2023-07-11",
       "Channel": "Current",
@@ -134,17 +141,17 @@
     },
     {
       "ReleaseDate": "2023-05-09",
-      "Channel": "Monthly Enterprise",
-      "Build": "16227.20318",
-      "Version": "2303",
-      "FullBuild": "16.0.16227.20318"
-    },
-    {
-      "ReleaseDate": "2023-05-09",
       "Channel": "Current",
       "Build": "16327.20248",
       "Version": "2304",
       "FullBuild": "16.0.16327.20248"
+    },
+    {
+      "ReleaseDate": "2023-05-09",
+      "Channel": "Monthly Enterprise",
+      "Build": "16227.20318",
+      "Version": "2303",
+      "FullBuild": "16.0.16227.20318"
     },
     {
       "ReleaseDate": "2023-05-09",
