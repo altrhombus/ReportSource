@@ -1,11 +1,18 @@
 {
   "DataForNerds": {
-    "LastUpdatedUTC": "2024-01-10T03:04:45.9820148Z",
+    "LastUpdatedUTC": "2024-01-31T13:01:14.2679917Z",
     "SourceList": [
       "https://docs.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date"
     ]
   },
   "Data": [
+    {
+      "ReleaseDate": "2024-01-30",
+      "Channel": "Current",
+      "Build": "17231.20182",
+      "Version": "2401",
+      "FullBuild": "16.0.17231.20182"
+    },
     {
       "ReleaseDate": "2024-01-09",
       "Channel": "Current",
@@ -64,27 +71,6 @@
     },
     {
       "ReleaseDate": "2023-12-12",
-      "Channel": "Semi-Annual Enterprise",
-      "Build": "15601.20832",
-      "Version": "2208",
-      "FullBuild": "16.0.15601.20832"
-    },
-    {
-      "ReleaseDate": "2023-12-12",
-      "Channel": "Semi-Annual Enterprise",
-      "Build": "16130.20868",
-      "Version": "2302",
-      "FullBuild": "16.0.16130.20868"
-    },
-    {
-      "ReleaseDate": "2023-12-12",
-      "Channel": "Semi-Annual Enterprise Preview",
-      "Build": "16731.20460",
-      "Version": "2308",
-      "FullBuild": "16.0.16731.20460"
-    },
-    {
-      "ReleaseDate": "2023-12-12",
       "Channel": "Current",
       "Build": "17029.20108",
       "Version": "2311",
@@ -103,6 +89,27 @@
       "Build": "16827.20324",
       "Version": "2309",
       "FullBuild": "16.0.16827.20324"
+    },
+    {
+      "ReleaseDate": "2023-12-12",
+      "Channel": "Semi-Annual Enterprise Preview",
+      "Build": "16731.20460",
+      "Version": "2308",
+      "FullBuild": "16.0.16731.20460"
+    },
+    {
+      "ReleaseDate": "2023-12-12",
+      "Channel": "Semi-Annual Enterprise",
+      "Build": "16130.20868",
+      "Version": "2302",
+      "FullBuild": "16.0.16130.20868"
+    },
+    {
+      "ReleaseDate": "2023-12-12",
+      "Channel": "Semi-Annual Enterprise",
+      "Build": "15601.20832",
+      "Version": "2208",
+      "FullBuild": "16.0.15601.20832"
     },
     {
       "ReleaseDate": "2023-11-29",
@@ -527,9 +534,9 @@
     {
       "ReleaseDate": "2023-04-11",
       "Channel": "Semi-Annual Enterprise",
-      "Build": "15601.20626",
-      "Version": "2208",
-      "FullBuild": "16.0.15601.20626"
+      "Build": "14931.20964",
+      "Version": "2202",
+      "FullBuild": "16.0.14931.20964"
     },
     {
       "ReleaseDate": "2023-04-11",
@@ -541,9 +548,9 @@
     {
       "ReleaseDate": "2023-04-11",
       "Channel": "Semi-Annual Enterprise",
-      "Build": "14931.20964",
-      "Version": "2202",
-      "FullBuild": "16.0.14931.20964"
+      "Build": "15601.20626",
+      "Version": "2208",
+      "FullBuild": "16.0.15601.20626"
     },
     {
       "ReleaseDate": "2023-04-11",
