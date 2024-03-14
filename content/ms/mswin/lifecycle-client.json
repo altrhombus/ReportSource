@@ -1,6 +1,6 @@
 {
   "DataForNerds": {
-    "LastUpdatedUTC": "2024-03-14T02:56:22.7018814Z",
+    "LastUpdatedUTC": "2024-03-14T03:22:39.1938945Z",
     "SourceList": [
       "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education"
     ]
@@ -8,18 +8,18 @@
   "Data": [
     {
       "Version": "21H2",
-      "StartDate": "2021-10-04T00:00:00.000-08:00",
-      "EndDate": "2021-10-04T00:00:00.000-08:00"
+      "StartDate": "2021-10-04",
+      "EndDate": "2021-10-04"
     },
     {
       "Version": "22H2",
-      "StartDate": "2022-09-20T00:00:00.000-08:00",
-      "EndDate": "2022-09-20T00:00:00.000-08:00"
+      "StartDate": "2022-09-20",
+      "EndDate": "2022-09-20"
     },
     {
       "Version": "23H2",
-      "StartDate": "2023-10-31T00:00:00.000-08:00",
-      "EndDate": "2023-10-31T00:00:00.000-08:00"
+      "StartDate": "2023-10-31",
+      "EndDate": "2023-10-31"
     }
   ]
 }
