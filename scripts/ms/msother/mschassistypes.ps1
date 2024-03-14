@@ -17,7 +17,7 @@ foreach ($sourceURL in $msdata) {
     }
 }
 
-$releaseList = $releaseList | Sort-Object Value | Select-Object Value,Number -Unique
+$releaseList = $releaseList | Sort-Object Number | Select-Object Value,Number -Unique
 
 $outputData = [PSCustomObject]@{
     "DataForNerds"=[PSCustomObject]@{
