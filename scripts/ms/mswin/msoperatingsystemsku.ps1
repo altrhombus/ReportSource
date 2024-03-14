@@ -31,7 +31,7 @@ $outputData = [PSCustomObject]@{
 $allProperties = $releaseList[0].psobject.Properties.Name
 
 If(Compare-Object $d4nData.Data $releaseList -Property $allProperties -SyncWindow 0) {
-    $outputFolder = Resolve-Path (Join-Path $PSScriptRoot -ChildPath "../../../content/ms/msother")
+    $outputFolder = Resolve-Path (Join-Path $PSScriptRoot -ChildPath "../../../content/ms/mswin")
     $outputFile = Join-Path $outputFolder -ChildPath "msoperatingsystemsku.json"
 
     $jsonData = $outputData | ConvertTo-Json

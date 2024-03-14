@@ -1,5 +1,5 @@
 ﻿$msdata = @("https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/cim-chassis")
-$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/mswin/mschassistypes.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
+$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/msother/mschassistypes.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $releaseList = New-Object System.Collections.ArrayList
 
