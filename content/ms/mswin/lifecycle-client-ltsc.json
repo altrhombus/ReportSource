@@ -1,0 +1,24 @@
+{
+    "DataForNerds": {
+      "LastUpdatedUTC": "2024-03-15T13:41:39.297872Z",
+      "SourceList": [
+        "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-2016-ltsb",
+        "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-ltsc-2019"
+      ]
+    },
+    "Data": [
+      {
+        "Version": "Windows 10 2016 LTSB",
+        "StartDate": "2016-08-02",
+        "MainstreamEndDate": "2021-10-13",
+        "ExtendedEndDate": "2026-10-14"
+      },
+      {
+        "Version": "Windows 10 Enterprise LTSC 2019 ",
+        "StartDate": "2018-11-13",
+        "MainstreamEndDate": "2024-01-10",
+        "ExtendedEndDate": "2029-01-10"
+      }
+    ]
+  }
+  

@@ -1,4 +1,4 @@
-$msdata = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education", "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-2016-ltsb", "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-ltsc-2019", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education")
+$msdata = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education")
 $d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/mswin/lifecycle-client.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $releaseList = New-Object System.Collections.ArrayList
@@ -22,7 +22,7 @@ $releaseList = $releaseList | Sort-Object Version | Select-Object Version,StartD
 $outputData = [PSCustomObject]@{
     "DataForNerds"=[PSCustomObject]@{
         "LastUpdatedUTC" = (Get-Date).ToUniversalTime()
-        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education", "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-2016-ltsb", "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-ltsc-2019", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education")
+        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education")
     }
     "Data" = $releaseList
 }
