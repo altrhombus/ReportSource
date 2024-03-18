@@ -1,9 +1,9 @@
 {
   "DataForNerds": {
-    "LastUpdatedUTC": "2024-03-15T02:02:26.9907192Z",
+    "LastUpdatedUTC": "2024-03-18T19:35:15.6130554Z",
     "SourceList": [
-      "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
-      "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education"
+      "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+      "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro"
     ]
   },
   "Data": [
@@ -20,27 +20,27 @@
     {
       "Version": "1607",
       "StartDate": "2016-08-02",
-      "EndDate": "2019-04-10"
+      "EndDate": "2018-04-11"
     },
     {
       "Version": "1703",
       "StartDate": "2017-04-11",
-      "EndDate": "2019-10-09"
+      "EndDate": "2018-10-10"
     },
     {
       "Version": "1709",
       "StartDate": "2017-10-17",
-      "EndDate": "2020-10-14"
+      "EndDate": "2019-04-10"
     },
     {
       "Version": "1803",
       "StartDate": "2018-04-30",
-      "EndDate": "2021-05-12"
+      "EndDate": "2019-11-13"
     },
     {
       "Version": "1809",
       "StartDate": "2018-11-13",
-      "EndDate": "2021-05-12"
+      "EndDate": "2020-11-11"
     },
     {
       "Version": "1903",
@@ -50,7 +50,7 @@
     {
       "Version": "1909",
       "StartDate": "2019-11-12",
-      "EndDate": "2022-05-11"
+      "EndDate": "2021-05-12"
     },
     {
       "Version": "2004",
@@ -60,7 +60,7 @@
     {
       "Version": "20H2",
       "StartDate": "2020-10-20",
-      "EndDate": "2023-05-10"
+      "EndDate": "2022-05-11"
     },
     {
       "Version": "21H1",
@@ -70,17 +70,17 @@
     {
       "Version": "21H2",
       "StartDate": "2021-10-04",
-      "EndDate": "2024-10-09"
+      "EndDate": "2023-10-11"
     },
     {
       "Version": "21H2",
       "StartDate": "2021-11-16",
-      "EndDate": "2024-06-12"
+      "EndDate": "2023-06-14"
     },
     {
       "Version": "22H2",
       "StartDate": "2022-09-20",
-      "EndDate": "2025-10-15"
+      "EndDate": "2024-10-09"
     },
     {
       "Version": "22H2",
@@ -90,7 +90,7 @@
     {
       "Version": "23H2",
       "StartDate": "2023-10-31",
-      "EndDate": "2026-11-11"
+      "EndDate": "2025-11-12"
     }
   ]
 }
