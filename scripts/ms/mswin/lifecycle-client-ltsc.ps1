@@ -19,7 +19,7 @@ foreach ($sourceURL in $msdata) {
     }
 }
 
-$releaseList = $releaseList | Sort-Object Version | Select-Object Version,StartDate,MainstreamEndDate,ExtendedEndDate -Unique
+$releaseList = $releaseList | Sort-Object Version | Select-Object Version,SKU,StartDate,MainstreamEndDate,ExtendedEndDate -Unique
 
 $outputData = [PSCustomObject]@{
     "DataForNerds"=[PSCustomObject]@{
