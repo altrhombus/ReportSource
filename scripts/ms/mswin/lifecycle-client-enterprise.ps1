@@ -32,7 +32,7 @@ $allProperties = $releaseList[0].psobject.Properties.Name
 
 If(Compare-Object $d4nData.Data $releaseList -Property $allProperties -SyncWindow 0) {
     $outputFolder = Resolve-Path (Join-Path $PSScriptRoot -ChildPath "../../../content/ms/mswin")
-    $outputFile = Join-Paßth $outputFolder -ChildPath "lifecycle-client-enterprise.json"
+    $outputFile = Join-Path $outputFolder -ChildPath "lifecycle-client-enterprise.json"
 
     $jsonData = $outputData | ConvertTo-Json
     [System.IO.File]::WriteAllLines($outputFile, $jsonData)   
