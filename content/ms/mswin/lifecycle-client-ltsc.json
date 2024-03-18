@@ -1,25 +1,42 @@
 {
   "DataForNerds": {
-    "LastUpdatedUTC": "2024-03-18T19:51:02.6347826Z",
+    "LastUpdatedUTC": "2024-03-18T23:12:12.0496231Z",
     "SourceList": [
-      "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-2016-ltsb",
-      "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-ltsc-2019"
+      "https://learn.microsoft.com/en-us/windows/release-health/release-information"
     ]
   },
   "Data": [
     {
-      "Version": "Windows 10 2016 LTSB",
-      "SKU": "LTSC",
-      "StartDate": "2016-08-02",
-      "MainstreamEndDate": "2021-10-13",
-      "ExtendedEndDate": "2026-10-14"
+      "Version": "1507 (RTM)",
+      "ServicingOption": "Long-Term Servicing Branch (LTSB)",
+      "Build": "10240",
+      "StartDate": "2015-07-29",
+      "MainstreamEndDate": "End of servicing",
+      "ExtendedEndDate": "2025-10-14"
     },
     {
-      "Version": "Windows 10 Enterprise LTSC 2019 ",
-      "SKU": "LTSC",
+      "Version": "1607",
+      "ServicingOption": "Long-Term Servicing Branch (LTSB)",
+      "Build": "14393",
+      "StartDate": "2016-08-02",
+      "MainstreamEndDate": "End of servicing",
+      "ExtendedEndDate": "2026-10-13"
+    },
+    {
+      "Version": "1809",
+      "ServicingOption": "Long-Term Servicing Channel (LTSC)",
+      "Build": "17763",
       "StartDate": "2018-11-13",
-      "MainstreamEndDate": "2024-01-10",
-      "ExtendedEndDate": "2029-01-10"
+      "MainstreamEndDate": "End of servicing",
+      "ExtendedEndDate": "2029-01-09"
+    },
+    {
+      "Version": "21H2",
+      "ServicingOption": "Long-Term Servicing Channel (LTSC)",
+      "Build": "19044",
+      "StartDate": "2021-11-16",
+      "MainstreamEndDate": "2027-01-12",
+      "ExtendedEndDate": "2032-01-13 (IoT Enterprise only)<sup>1</sup>"
     }
   ]
 }
