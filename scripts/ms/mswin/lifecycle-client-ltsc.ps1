@@ -10,6 +10,7 @@ foreach ($sourceURL in $msdata) {
         $releaseList.add(
             [PSCustomObject]@{
                 Version = $_.Groups[1].value
+                SKU = "LTSC"
                 StartDate = $(Get-Date $_.Groups[2].Value -Format "yyyy-MM-dd")
                 MainstreamEndDate = $(Get-Date $_.Groups[4].Value -Format "yyyy-MM-dd")
                 ExtendedEndDate = $(Get-Date $_.Groups[6].Value -Format "yyyy-MM-dd")

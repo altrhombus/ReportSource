@@ -1,5 +1,5 @@
-$msdata = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education")
-$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/mswin/lifecycle-client.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
+$msdata = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro")
+$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/mswin/lifecycle-client-pro.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $releaseList = New-Object System.Collections.ArrayList
 
@@ -10,6 +10,7 @@ foreach ($sourceURL in $msdata) {
         $releaseList.add(
             [PSCustomObject]@{
                 Version = $_.Groups[1].value
+                SKU = "Pro"
                 StartDate = $(Get-Date $_.Groups[2].Value -Format "yyyy-MM-dd")
                 EndDate = $(Get-Date $_.Groups[4].Value -Format "yyyy-MM-dd")
             }
@@ -22,7 +23,7 @@ $releaseList = $releaseList | Sort-Object Version | Select-Object Version,StartD
 $outputData = [PSCustomObject]@{
     "DataForNerds"=[PSCustomObject]@{
         "LastUpdatedUTC" = (Get-Date).ToUniversalTime()
-        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-enterprise-and-education")
+        "SourceList" = @("https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro", "https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro")
     }
     "Data" = $releaseList
 }
@@ -31,7 +32,7 @@ $allProperties = $releaseList[0].psobject.Properties.Name
 
 If(Compare-Object $d4nData.Data $releaseList -Property $allProperties -SyncWindow 0) {
     $outputFolder = Resolve-Path (Join-Path $PSScriptRoot -ChildPath "../../../content/ms/mswin")
-    $outputFile = Join-Path $outputFolder -ChildPath "lifecycle-client.json"
+    $outputFile = Join-Paßth $outputFolder -ChildPath "lifecycle-client-pro.json"
 
     $jsonData = $outputData | ConvertTo-Json
     [System.IO.File]::WriteAllLines($outputFile, $jsonData)   
