@@ -1,5 +1,5 @@
 $msdata = "https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
-$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/msother/mslocales.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
+$d4nData = Invoke-WebRequest "https://raw.githubusercontent.com/altrhombus/ReportSource/main/content/ms/msother/msasrguid.json" | Select-Object -ExpandProperty Content | ConvertFrom-Json
 
 $pageData = Invoke-WebRequest $msdata -UseBasicParsing
 
