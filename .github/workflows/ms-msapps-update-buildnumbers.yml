@@ -15,11 +15,11 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v2
 
-      - name: Set Git User 
-        run: | 
-          git config --global user.name "${{ github.actor }}" 
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"    
-        
+      - name: Set Git User
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          
       - name: Run the PowerShell Script
         shell: pwsh
         run: ./scripts/ms/msapps/m365buildnumbers.ps1
@@ -36,7 +36,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const { data: pullRequest } = await github.pulls.create({
+            const pullRequest = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'Automatic Update of M365 App Build Numbers',
@@ -44,16 +44,16 @@ jobs:
               base: 'main',
               body: 'This pull request was automatically generated.'
             });
-            return pullRequest.number;
+            core.setOutput('pullRequestNumber', pullRequest.data.number);
 
       - name: Auto Approve Pull Request
         uses: actions/github-script@v6
         with:
           script: |
-            await github.pulls.createReview({
+            await github.rest.pulls.createReview({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: steps.cpr.outputs.pullRequest.number,
+              pull_number: ${{ steps.cpr.outputs.pullRequestNumber }},
               event: 'APPROVE',
               body: 'Auto-approved pull request'
             });
