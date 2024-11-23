@@ -8,23 +8,47 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
     steps:
       - name: Clone Repository
         uses: actions/checkout@v2
+        
       - name: Run the PowerShell Script
         shell: pwsh
         run: ./scripts/ms/msapps/m365buildnumbers.ps1
-      - name: Submit a Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: Updated Microsoft Windows Build Numbers JSON
-          committer: GitHub <noreply@github.com>
-          branch: au/ms-msapps-update-buildnumbers
-          delete-branch: true
-          title: Automatic Update of M365 App Build Numbers
-      - name: Check outputs
+        
+      - name: Create a New Branch
         run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
-          
+          git checkout -b au/ms-msapps-update-buildnumbers
+          git add .
+          git commit -m "Updated Microsoft Windows Build Numbers JSON"
+          git push origin au/ms-msapps-update-buildnumbers
+
+      - name: Create Pull Request
+        id: cpr
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: pullRequest } = await github.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Automatic Update of M365 App Build Numbers',
+              head: 'au/ms-msapps-update-buildnumbers',
+              base: 'main',
+              body: 'This pull request was automatically generated.'
+            });
+            return pullRequest.number;
+
+      - name: Auto Approve Pull Request
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: steps.cpr.outputs.pullRequest.number,
+              event: 'APPROVE',
+              body: 'Auto-approved pull request'
+            });
