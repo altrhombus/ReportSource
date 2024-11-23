@@ -29,6 +29,14 @@ jobs:
           git checkout -b au/ms-msapps-update-buildnumbers
           git add .
           git commit -m "Updated Microsoft Windows Build Numbers JSON"
+
+      - name: Pull Remote Changes
+        run: |
+          git fetch origin
+          git pull origin main
+
+      - name: Push Changes
+        run: |
           git push origin au/ms-msapps-update-buildnumbers
 
       - name: Create Pull Request
